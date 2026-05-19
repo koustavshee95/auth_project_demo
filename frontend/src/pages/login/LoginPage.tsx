@@ -22,14 +22,8 @@ export const LoginPage = () => {
   const [loading, setLoading] = useState(false);
 
   const validateForm = (): boolean => {
-    const newErrors = {
-      email: "",
-      password: "",
-      captcha: "",
-      submit: "",
-    };
+    const newErrors = { email: "", password: "", captcha: "", submit: "" };
 
-    // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!formData.email) {
       newErrors.email = "Email is required";
@@ -37,14 +31,12 @@ export const LoginPage = () => {
       newErrors.email = "Please enter a valid email";
     }
 
-    // Password validation
     if (!formData.password) {
       newErrors.password = "Password is required";
     } else if (formData.password.length < 6) {
       newErrors.password = "Password must be at least 6 characters";
     }
 
-    // Captcha validation
     if (!formData.captcha) {
       newErrors.captcha = "Please enter the captcha";
     }
@@ -54,32 +46,19 @@ export const LoginPage = () => {
   };
 
   const handleInputChange = (field: string, value: string) => {
-    setFormData((prev) => ({
-      ...prev,
-      [field]: value,
-    }));
-    // Clear error when user starts typing
+    setFormData((prev) => ({ ...prev, [field]: value }));
     if (errors[field as keyof typeof errors]) {
-      setErrors((prev) => ({
-        ...prev,
-        [field]: "",
-      }));
+      setErrors((prev) => ({ ...prev, [field]: "" }));
     }
   };
 
   const handleLogin = async () => {
-    if (!validateForm()) {
-      return;
-    }
+    if (!validateForm()) return;
 
     setLoading(true);
     const response = await AuthServices.login(formData);
 
     if (response.success) {
-      // Store auth token and user info
-      localStorage.setItem("authToken", "your-token-here"); // In real app, get token from backend
-      localStorage.setItem("userEmail", formData.email);
-      // Navigate to home/dashboard page
       navigate("/home");
     } else {
       setErrors((prev) => ({
@@ -92,10 +71,6 @@ export const LoginPage = () => {
 
   return (
     <div className="login-page">
-      <div className="card-header">
-        <p className="add-logo">Add a Logo</p>
-      </div>
-
       <h2 className="card-title">Sign In To Continue</h2>
 
       {errors.submit && (
@@ -143,19 +118,17 @@ export const LoginPage = () => {
       </div>
 
       <div className="form-group">
-        <div className="captcha-section">
-          <label>Captcha *</label>
-          <div className="captcha-display">
-            <span className="captcha-text">ABCD</span>
-            <Input
-              type="text"
-              placeholder="Enter Captcha"
-              value={formData.captcha}
-              onChange={(value) => handleInputChange("captcha", value)}
-              name="captcha"
-              error={errors.captcha}
-            />
-          </div>
+        <label>Captcha *</label>
+        <div className="captcha-display">
+          <span className="captcha-text">ABCD</span>
+          <Input
+            type="text"
+            placeholder="Enter Captcha"
+            value={formData.captcha}
+            onChange={(value) => handleInputChange("captcha", value)}
+            name="captcha"
+            error={errors.captcha}
+          />
         </div>
       </div>
 

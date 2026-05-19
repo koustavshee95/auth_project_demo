@@ -7,16 +7,6 @@
   padding: 8px;
 }
 
-.card-header {
-  text-align: center;
-  padding-bottom: 0;
-  margin-bottom: 12px;
-}
-
-.add-logo {
-  display: none;
-}
-
 .card-title {
   margin: 0 0 10px 0;
   font-size: 16px;
@@ -76,12 +66,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.captcha-section {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
 }
 
 .captcha-display {

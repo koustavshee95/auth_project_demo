@@ -7,7 +7,7 @@ export const CompanyBranding = () => {
     <div className="branding-section">
       <div className="logo-circle">Rx</div>
 
-      <h2>ABCDEFGHI</h2>
+      <h2>ABCD</h2>
 
       <TextRotator />
     </div>

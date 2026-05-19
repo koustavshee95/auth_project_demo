@@ -1,27 +1,19 @@
 .footer-section {
   position: absolute;
-
   left: 80px;
   right: 80px;
-
   bottom: 30px;
-
   width: auto;
-
   border-top: 2px solid rgba(255, 255, 255, 0.5);
-
   padding-top: 20px;
 }
 
 .footer-content {
   width: 100%;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   color: white;
-
   font-size: 15px;
   line-height: 1.5;
   font-weight: 500;
@@ -51,7 +43,6 @@
 
 .footer-links span {
   cursor: pointer;
-
   transition: color 0.3s ease,
               transform 0.3s ease;
 
@@ -60,6 +51,5 @@
 
 .footer-links span:hover {
   color: white;
-
   transform: translateY(-1px);
 }

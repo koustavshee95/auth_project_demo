@@ -13,8 +13,8 @@ export const TextRotator = () => {
   }, []);
 
   const taglineText = showText
-    ? '"Insert something and toggle it"'
-    : '"Another dummy text here"';
+    ? 'This is a  toggle text'
+    : 'Another dummy text here';
 
   return <p className="tagline">{taglineText}</p>;
 };
