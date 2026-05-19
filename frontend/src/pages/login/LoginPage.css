@@ -1,0 +1,132 @@
+.login-page {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.card-header {
+  text-align: center;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 4px;
+}
+
+.add-logo {
+  margin: 0;
+  font-size: 11px;
+  color: #999;
+  font-weight: 500;
+}
+
+.card-title {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #333;
+  font-size: 12px;
+}
+
+.password-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forgot-password {
+  font-size: 11px;
+  color: #4a90e2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-wrapper .input-field {
+  padding-right: 36px;
+}
+
+.eye-toggle {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.captcha-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.captcha-display {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.captcha-text {
+  background-color: #f5f5f5;
+  padding: 8px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  color: #333;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-decoration: line-through;
+  min-width: 70px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.captcha-display .input-wrapper {
+  flex: 1;
+}
+
+.submit-error {
+  padding: 8px;
+  background-color: #fee;
+  color: #c33;
+  border-left: 4px solid #c33;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.submit-error p {
+  margin: 0;
+}
+
+.error-message {
+  color: #c33;
+  font-size: 11px;
+  margin-top: 2px;
+}

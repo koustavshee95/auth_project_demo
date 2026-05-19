@@ -1,0 +1,139 @@
+ html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+#root {
+  width: 100%;  
+  height: 100vh;
+}
+
+.authLayout {
+  display: flex;
+  height: 100vh;
+  background: black;
+  overflow: hidden;
+}
+
+.leftSection {
+  width: 70%;
+  background: linear-gradient(135deg, #001a66 0%, #0033cc 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+  padding-left: 80px;
+}
+
+.leftSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 35px,
+    rgba(255, 255, 255, 0.05) 35px,
+    rgba(255, 255, 255, 0.05) 70px
+  );
+  pointer-events: none;
+}
+
+.branding-section {
+  text-align: left;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.logo-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: white;
+  color: #001a66;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.branding-section h2 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.tagline {
+  margin: 0;
+  font-size: 16px;
+  opacity: 0.9;
+  font-weight: 300;
+  min-height: 24px;
+}
+
+.footer-section {
+  position: absolute;
+  bottom: 30px;
+  left: 80px;
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+.footer-section p {
+  margin: 0;
+}
+
+.rightSection {
+  width: 30%;
+  background-color: #f5f7fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .authLayout {
+    flex-direction: column;
+  }
+
+  .leftSection,
+  .rightSection {
+    flex: none;
+    width: 100%;
+  }
+
+  .leftSection {
+    min-height: 300px;
+  }
+
+  .rightSection {
+    min-height: 100vh;
+  }
+}
+
+.cardWrapper {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+} 
+
+
+
