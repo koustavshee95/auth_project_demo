@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import "./HomePage.css";
-//import { AuthServices } from "../../../services/AuthServices";
 import { AuthServices } from "../../services/AuthServices";
 
 export const HomePage = () => {
@@ -23,7 +22,7 @@ export const HomePage = () => {
 
       <div className="home-content">
         <p>You are logged in as: <strong>{userEmail}</strong></p>
-        <p>This is your home page after successful login.</p>
+        <p>Good Afternoon!</p>
       </div>
     </div>
   );

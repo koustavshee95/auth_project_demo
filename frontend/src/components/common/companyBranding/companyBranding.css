@@ -1,0 +1,39 @@
+.branding-section {
+  text-align: left;
+
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 16px;
+}
+
+.logo-circle {
+  width: 80px;
+  height: 80px;
+
+  border-radius: 50%;
+
+  background-color: white;
+  color: #001a66;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 32px;
+  font-weight: 700;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.branding-section h2 {
+  margin: 0;
+
+  font-size: 32px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}

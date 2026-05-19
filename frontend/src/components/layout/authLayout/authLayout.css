@@ -1,4 +1,4 @@
- html,
+html,
 body {
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@ body {
 }
 
 #root {
-  width: 100%;  
+  width: 100%;
   height: 100vh;
 }
 
@@ -20,15 +20,15 @@ body {
 
 .leftSection {
   width: 70%;
-  background: linear-gradient(135deg, #001a66 0%, #0033cc 100%);
-  color: white;
+  background: #0b00d9;
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  position: relative;
-  overflow: hidden;
   padding-left: 80px;
+  color: white;
 }
 
 .leftSection::before {
@@ -46,36 +46,6 @@ body {
     rgba(255, 255, 255, 0.05) 70px
   );
   pointer-events: none;
-}
-
-.branding-section {
-  text-align: left;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
-}
-
-.logo-circle {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: white;
-  color: #001a66;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 32px;
-  font-weight: 700;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.branding-section h2 {
-  margin: 0;
-  font-size: 32px;
-  font-weight: 700;
-  letter-spacing: 2px;
 }
 
 .tagline {
@@ -133,7 +103,4 @@ body {
   left: 70%;
   transform: translate(-50%, -50%);
   z-index: 100;
-} 
-
-
-
+}
